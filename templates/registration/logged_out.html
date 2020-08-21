@@ -1,0 +1,23 @@
+{% extends "base_generic.html" %}
+{% load static %}
+{% block content %}
+
+<section class="hero-wrap hero-wrap-2" style="background-image: url('{% static "img/bg_5.jpg" %}'); background-position: 50% -87.5px;" data-stellar-background-ratio="0.5">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row no-gutters slider-text align-items-center justify-content-center">
+      <div class="col-md-9 ftco-animate mb-0 text-center fadeInUp ftco-animated">
+        <p class="breadcrumbs mb-0"><span class="mr-2"><a href="{% url 'index' %}"></a></span></p>
+        <h1 class="mb-0 bread">Log out</h1>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+  <p>Logged out!</p>  
+  <a href="{% url 'login'%}">Click here to login again.</a>
+
+{% endblock %}

@@ -1,0 +1,100 @@
+﻿{% extends "base_generic.html" %}
+{% load static %}
+{% block content %}
+
+
+
+
+
+<section class="hero-wrap" style="background-image: url('../static/img/bg_1.jpeg'); background-position: 50% -46px;" data-stellar-background-ratio="0.5">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row no-gutters slider-text align-items-center">
+      <div class="col-md-8 ftco-animate d-flex align-items-end fadeInUp ftco-animated">
+        <div class="text w-100">
+          <h1 class="mb-4">Welcome to Wiki Library Website</h1>
+          <p class="mb-4">Website developed by Faculty of Statistical Studies and Research Cairo University Web Design Diploma Students</p>
+
+
+          <p><a href="{%url 'books'%}" class="btn btn-primary py-3 px-4">View All Books</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--<h1>Local Library Home</h1>
+<p>Welcome to LocalLibrary</p>
+<h6>Website developed by Asmaa kamar</h6>
+<h6>Under Supervision of Dr/Tarek Aly</h6>
+<h2>Dynamic content</h2>
+<p>The library has the following record counts:</p>-->
+<!--<ul>
+  <li><strong>Books:</strong> {{ num_books }}</li>
+  <li><strong>Copies:</strong> {{ num_instances }}</li>
+  <li><strong>Copies available:</strong> {{ num_instances_available }}</li>
+  <li><strong>Authors:</strong> {{ num_authors }}</li>
+</ul>-->
+
+
+
+<section class="ftco-counter ftco-section ftco-no-pt ftco-no-pb img bg-light" id="section-counter">
+    	<div class="container">
+    		<div class="row">
+          <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate fadeInUp ftco-animated">
+            <div class="block-18 py-4 mb-4">
+              <div class="text align-items-center">
+                <strong class="number" data-number={{ num_books }}></strong>
+                <span>All Books</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate fadeInUp ftco-animated">
+            <div class="block-18 py-4 mb-4">
+              <div class="text align-items-center">
+                <strong class="number" data-number={{ num_instances }}></strong>
+                <span>Copies</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate fadeInUp ftco-animated">
+            <div class="block-18 py-4 mb-4">
+              <div class="text align-items-center">
+                <strong class="number" data-number={{ num_instances_available }}></strong>
+                <span>Copies available</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate fadeInUp ftco-animated">
+            <div class="block-18 py-4 mb-4">
+              <div class="text align-items-center">
+                <strong class="number" data-number={{ num_authors }}></strong>
+                <span>All Authors</span>
+              </div>
+            </div>
+          </div>
+              <div class="container">
+                <div class="mb-4"><h4>You have visited this page {{ num_visits }}
+                  {% if num_visits == 1 %} time
+                  {% else %} times
+                  {% endif %}.</h4>
+                </div>
+              </div>
+
+        </div>
+    	</div>
+    </section>
+
+
+
+
+
+
+
+<!--<h5>You have visited this page {{ num_visits }}
+  {% if num_visits == 1 %} time
+  {% else %} times
+  {% endif %}.</p></h5>-->
+
+{% endblock %}

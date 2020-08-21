@@ -1,0 +1,27 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+
+<div class="container-fluid px-md-5">
+  <img class="rounded mx-auto d-block" src="{{ genre.image.url}}" alt="{{genre.name}}" style="width:200px" heighet="100">
+
+<h1>Title: {{ genre.name }}</h1>
+
+
+
+<div>
+
+
+{% for copy in genre.book_set.all %}
+<p><strong><a href="{% url 'book-detail' copy.id %}">{{ copy.title }}</a></strong> <br>
+
+  {{copy.summary}}
+</p>
+
+{% endfor %}
+</div>
+
+</div>
+
+{% endblock %}
